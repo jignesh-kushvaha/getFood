@@ -1,0 +1,8 @@
+->import json file to collection:
+    mongoimport --uri "mongodb+srv://jigneshkushvaha:Jigneshatlas1410@cluster0.naone.mongodb.net/getfood" --collection fooditems --type json --file "D:\Web development\MERN Stack\GetFoodEasy\foodData2.json" --jsonArray
+
+-> Run your connection string in your command line and Use this connection string in your application
+    > mongosh "mongodb+srv://cluster0.naone.mongodb.net/" --apiVersion 1 --username jigneshkushvaha
+
+-> mongoose.connection.db - gives access to the raw MongoDB database object (rather than Mongoose models).
+  .collection("fooditems") accesses the collection named fooditems, which contains documents (similar to rows in a SQL table) that you want to query.
