@@ -23,6 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
+foodCategory.json
+foodData2.json
+mongodb_notes.txt
+
 #================================ backend ignore files ==========================
 # Logs
 backend/logs
