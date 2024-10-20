@@ -8,8 +8,7 @@ function Login() {
     password: "",
   });
   const navigate = useNavigate();
-
-
+  
   const handleOnChangeData = (e)=>{
     setUserData({...userData,[e.target.name]:e.target.value});
   }
