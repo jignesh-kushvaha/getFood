@@ -6,3 +6,34 @@
 
 -> mongoose.connection.db - gives access to the raw MongoDB database object (rather than Mongoose models).
   .collection("fooditems") accesses the collection named fooditems, which contains documents (similar to rows in a SQL table) that you want to query.
+
+-> Middleware:
+    1) Application-level Middleware :
+        // Application-level middleware
+        app.use((req, res, next) => {
+            console.log('Request Type:', req.method);
+            next(); // Call the next middleware
+        });
+    2) Router-level Middleware:
+        // Router-level middleware
+        router.use((req, res, next) => {
+            console.log('Router Middleware triggered');
+            next();
+        });
+    3) Error-handling Middleware: error-handling middleware is defined with four arguments: err, req, res, and next. Catch and handle errors during the request-response cycle.
+        // Error-handling middleware
+        app.use((err, req, res, next) => {
+            console.error(err.stack);
+            res.status(500).send('Something broke!');
+        });
+    4) Built-in Middleware: to handle common tasks such as serving static files or parsing request bodies.
+        > express.json(): Parses incoming requests with JSON payloads. & express.urlencoded(): Parses URL-encoded data.
+        // Built-in middleware to parse JSON
+        app.use(express.json());
+
+    5) Third-party Middleware: Commonly installed via npm and is used to add additional functionality.
+        - morgan: HTTP request logger.
+        - body-parser: Body parsing middleware.
+        - cors: Enable Cross-Origin Resource Sharing.
+        // Third-party middleware for logging
+        app.use(morgan('dev'));
