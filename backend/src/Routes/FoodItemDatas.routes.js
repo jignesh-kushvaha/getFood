@@ -5,7 +5,7 @@ const foodItemDataRouter = express.Router();
 
 foodItemDataRouter.post("/foodItemDatas", async (req,res)=>{
     try {
-        const _foodItems = await foodItems.find({});
+        const _foodItems = await foodItems.find().limit(10);
         return res.status(200).json(_foodItems)
     } catch (error) {
         return res.status(500).json({ message: error.message });
