@@ -22,7 +22,7 @@ function Cart() {
       date: new Date(),
     };
 
-    let response = await fetch("http://localhost:5000/api/order", {
+    let response = await fetch("https://get-food-frontend.vercel.app/api/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

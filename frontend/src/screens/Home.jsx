@@ -11,7 +11,7 @@ function Home() {
   const loadData = async () => {
     //fetching food items
     const foodDataResponse = await fetch(
-      "http://localhost:5000/api/foodItemDatas",
+      "https://get-food-frontend.vercel.app/api/foodItemDatas",
       {
         method: "POST",
         headers: {
@@ -24,7 +24,7 @@ function Home() {
 
     //fetching food categories
     const foodCategoryResponse = await fetch(
-      "http://localhost:5000/api/foodCategories",
+      "https://get-food-frontend.vercel.app/api/foodCategories",
       {
         method: "POST",
         headers: {
