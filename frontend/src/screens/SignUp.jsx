@@ -18,7 +18,7 @@ function SignUp() {
   const handleSubmitData = async (e) => {
       e.preventDefault();
       // try {
-        const response = await fetch("https://get-food-frontend.vercel.app/api/createuser",{
+        const response = await fetch("https://get-food-backend-teal.vercel.app/api/createuser",{
           method: "POST",
           headers: {
             "Content-Type": "application/json",

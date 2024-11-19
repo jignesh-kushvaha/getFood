@@ -9,7 +9,7 @@ function MyOrder() {
         //fetching food items
         let user_Id = localStorage.getItem("user");
         const myOrderResponse = await fetch(
-          "https://get-food-frontend.vercel.app/api/myorder",
+          "https://get-food-backend-teal.vercel.app/api/myorder",
           {
             method: "POST",
             headers: {

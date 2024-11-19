@@ -15,7 +15,7 @@ function Login() {
 
   const handleSubmitData = async (e) => {
       e.preventDefault();
-        const response = await fetch("https://get-food-frontend.vercel.app/api/loginuser",{
+        const response = await fetch("https://get-food-backend-teal.vercel.app/api/loginuser",{
           method: "POST",
           headers: {
             "Content-Type": "application/json",
