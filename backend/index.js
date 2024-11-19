@@ -30,6 +30,12 @@ app.use('/api', foodItemDataRouter);
 app.use('/api', foodCategoryRouter);
 app.use('/api', orderRouter);
 
+app.get('/', (req, res) => {
+  res.send('Hello from backend');
+});
+
 app.listen(process.env.PORT, () => {
   console.log(`App started listening...`)
 })
+
+export default app;
