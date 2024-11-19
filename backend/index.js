@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
   res.send('Hello from backend');
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(5000, () => {
   console.log(`App started listening...`)
 })
 
